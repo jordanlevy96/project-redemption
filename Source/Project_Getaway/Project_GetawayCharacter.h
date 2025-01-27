@@ -10,6 +10,7 @@
 class UInputComponent;
 class USkeletalMeshComponent;
 class UCameraComponent;
+class USpringArmComponent;
 class UInputAction;
 class UInputMappingContext;
 struct FInputActionValue;
@@ -24,6 +25,10 @@ class AProject_GetawayCharacter : public ACharacter
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Mesh, meta = (AllowPrivateAccess = "true"))
 	USkeletalMeshComponent* Mesh1P;
+
+	/** Spring Arm */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	USpringArmComponent* SpringArm;
 
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
